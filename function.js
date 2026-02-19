@@ -335,7 +335,7 @@ console.log(ans(a, b));
 
 function calculate(operation,a,b){
     
-    console.log(operation(a,b));
+    operation(a,b);
     
 }
 
