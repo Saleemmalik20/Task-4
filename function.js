@@ -423,3 +423,109 @@ for(let a of rewards){
     console.log(a);                             // Output will be -Level 1 Completed,Level 2 Completed,Level 3 Completed, Team Winner. 
     
 }
+
+
+
+
+// FINAL TEAM CHALLENGE
+
+// Build small system using ONLY above concepts:
+
+// Requirements:
+// - Object ® team details
+// - for...in ® print details
+// - Generator ® rewards
+// - Callback ® score calculation
+// - Default parameter
+// - Currying for bonus calculation
+// - Named + Arrow function
+// Everything in one file.
+
+
+// creating object and giving the team value
+
+let teams ={
+
+    Name : "Shaik Saleem Malik",
+    Role : "Developer",
+    Location : "Hyderabad",
+    Salary : 200000,
+    DOB : "20-09-1992"
+};
+
+// Using for - in to print the details.
+
+for(let c in teams){
+    
+    console.log(`${c} : ${teams[c]}`);
+    
+}
+
+
+// Generator --> rewards
+
+function * reward(){
+    yield "Flexible working Hours"
+    yield "Remote Woking Mode"
+    yield "Paid Vacation for weekends"
+}
+
+let gift =reward();
+console.log(gift.next().value);
+console.log(gift.next().value);
+console.log(gift.next().value);
+
+
+// Callback -> score calculation
+
+function scoreCalculation(operation,a,b){
+
+        operation(a,b);
+
+}
+
+function add(a,b){
+
+    console.log(a+b);
+    
+}
+
+scoreCalculation(add,10,5);
+
+
+// Default parameter
+
+function team( Name,Location, Salary, DOB, Role = "Developer" )
+    {
+        console.log("Name :", Name);
+        console.log("Role:", Role);
+        console.log("Location:", Location);
+        console.log("Salary:", Salary);
+        console.log("DOB:", DOB);  
+    
+    }
+
+
+
+team( "Kiran","hyderabad",600000,"10-06-1992",);
+
+
+
+// Currying for bonus calculation
+
+function bonusCalculation(bonus){
+    return function(salary){
+        console.log("Bonus : ", bonus+salary );
+        
+    }
+}
+bonusCalculation(10000)(600000);
+
+
+// named Function
+
+function welcome(name){
+    console.log("Hello",name, "Welcome to Team");
+    
+}
+welcome("Shaik Saleem Malik");
