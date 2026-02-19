@@ -349,7 +349,8 @@ function sub(a,b){
 
     console.log(a-b);                           v// Output will print the value of a=20 b=10 "a-b=10";    
 }
-
+calculate(add,10,5);
+calculate(sub,20,10);
 
 
 // LEVEL 6 – Currying
